@@ -5,21 +5,21 @@
     <rosparam file="$(eval find('gummi_ee_' + ee) + '/dynamixel/forearm_roll.yaml')" command="load"/>
     <node name="forearm_roll_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
           args="--manager=dxl_manager
-                --port gummi_d
+                --port gummi_ed
                 forearm_roll_controller"
           output="screen"/>
 
     <rosparam file="$(eval find('gummi_ee_' + ee) + '/dynamixel/wrist_flexor.yaml')" command="load"/>
     <node name="wrist_flexor_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
           args="--manager=dxl_manager
-                --port gummi_d
+                --port gummi_ed
                 wrist_flexor_controller"
           output="screen"/>
 
     <rosparam file="$(eval find('gummi_ee_' + ee) + '/dynamixel/wrist_extensor.yaml')" command="load"/>
     <node name="wrist_extensor_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
           args="--manager=dxl_manager
-                --port gummi_d
+                --port gummi_ed
                 wrist_extensor_controller"
           output="screen"/>
 
